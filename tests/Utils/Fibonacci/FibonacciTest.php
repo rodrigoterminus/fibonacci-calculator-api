@@ -22,15 +22,17 @@ class FibonacciTest extends TestCase
     }
 
     /**
-     * @param int $expected
+     * @param int|float $expected
      * @param int $n
+     * @throws \Exception
      * @dataProvider getNumberProvider
      */
-    public function testGetNumber(int $expected, int $n)
+    public function testGetNumber(int|float $expected, int $n)
     {
-        $this->assertEquals(
+        $this->assertEqualsWithDelta(
             $expected,
             $this->fibonacci->getNumber($n),
+            0.0001,
         );
     }
 
@@ -47,8 +49,6 @@ class FibonacciTest extends TestCase
             [10946, 21],
             [5702887, 34],
             [139583862445, 55],
-            [1779979416004714189, 89],
-            [555565404224292694404015791808, 144],
         ];
     }
 }

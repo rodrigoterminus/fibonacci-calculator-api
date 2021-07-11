@@ -6,5 +6,5 @@ namespace App\Utils\Fibonacci;
 
 interface FibonacciInterface
 {
-    public function getNumber(int $n);
+    public function getNumber(int $n): int|float;
 }
