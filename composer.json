@@ -18,7 +18,10 @@
             "App\\": "src/"
         }
     },
-    "require": {},
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "dev-master"
+    },
     "require-dev": {
         "phpunit/phpunit": "^10.0@dev"
     }
